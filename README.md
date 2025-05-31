@@ -35,16 +35,11 @@ This repository contains a Flask-based web application that serves as a customer
 
 1. **Clone the repository:**
    ```bash
-   git clone https://gitlab.anasource.com/foram/machine-learning.git
-   cd machine-learning
+   git clone https://github.com/Sanjay3739/ChatAssist-.git
+   cd ChatAssist
    ```
 
-2. **Checkout to the desired branch:**
-   ```bash
-   git checkout virtual-assistant-mongodb
-   ```
-
-3. **Create a virtual environment and activate:**
+2. **Create a virtual environment and activate:**
    - On macOS/Linux:
      ```bash
      python3 -m venv venv
@@ -56,7 +51,7 @@ This repository contains a Flask-based web application that serves as a customer
      venv\Scripts\activate
      ```
 
-4. **Install required dependencies:**
+3. **Install required dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
