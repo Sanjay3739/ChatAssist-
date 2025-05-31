@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>GenAi - Virtual Assistant</title>
+  <link rel="icon" href="static/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="static/images/favicon/apple-touch-icon.png" type="image/png" sizes="48x48">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://use.typekit.net/sgk7vjr.css" />
+  <script src="static/js/config.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css"/>
+</head>
+
+<body class="dark-theme">
+  <div class="wrapper genai-lab-page">
+    <header class="site-header">
+      <div class="min-container">
+          <div class="header-wrapper">
+              <a id="api-link" href="#" target="_self">
+                  <img src="static/images/genai-lab-dark-logo.svg" alt="GenAi Lab Logo" title="GenAi Lab Logo"  class="show-dark-image">
+              </a>
+          </div>
+      </div>
+  </header>
+  <main>
+      <section class="hero-section">
+        <div class="min-container">
+          <div class="box-content">
+            <div class="virtual-assistant-text">
+              <h1 class="virtual-assistant">Virtual Assistant Service</h1>
+              <p class="here-for-you">"we are here for you"</p>
+            </div>
+            <div class="virtual-assistant-image">
+              <img class="dark" src="static/images/hero-image-dark.svg" alt="Virtual Assistant">
+              <div class="btn-wrapper">
+                <a class="btn" href="https://www.sunlexbuddy.com" title="Learn More">Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+  </div>
+  <footer class="site-footer">
+    <div class="min-container">
+        <div class="footer-wrapper">
+            <div class="left">
+                <p>Powered By</p>
+                <img src="static/images/sunlexbuddy-dark-logo.svg" alt="sunlexbuddy" class="show-dark-image">
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="chat-btn button-wrapper custom-popup-link">
+          <img src="static/images/open-image.svg" alt="open" class="open">
+          <img src="static/images/close-image.svg" alt="close" class="close">
+        </a>
+    </div>
+</footer>
+  <div class="chat-box custom-popup">
+    <div class="popup-content-inner">
+      <div class="content-block">
+        <div class="title-wrapper">
+          <h3>Let’s Chat</h3>
+          <p>Please fill out the form below to start chatting with our agent</p>
+        </div>
+        <form action="#" class="chat-form" id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="location">Location</label>
+            <input type="text" id="location" class="form-control" placeholder="Enter your location" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit-btn" class="slide-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup-content-inner full-height">
+      <div class="chat-area">
+        <div class="chat-entry-list">
+          <div class="chat-entry receiver-entry">
+            <div class="chat-entry-inner">
+              <div class="chat-entry-content">
+                <div class="message-outer">
+                  <em class="user-icon">
+                    <img src="static/images/sunlexbuddy-icon.svg" alt="User icon">
+                  </em>
+                  <div class="chatbot-main" id="chatbot-main">
+                    <div class="message chat-message bot opening-statement">
+                      Hello! Welcome to <strong>sunlexbuddy</strong>.<br>
+                      I’m your virtual assistant here to help with your queries and provide information about our services.<br>
+                      How can I assist you today?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-entry-wrapper">
+          <div class="textarea-wrapper">
+            <form id="send-chat" method="POST" action="/chat">
+              <div class="form-group">
+                <input type="text" name="answer" id="answer" class="autosize" placeholder="Type your query..."></input>
+                <button class="send-btn" title="send message" type="submit">
+                  <img class="light" src="static/images/send-msg-icon-black.svg" alt="Send message icon">
+                  <img class="dark" src="static/images/send-msg-icon-white.svg" alt="Send message icon">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-message" id="popup-message">
+    Hi, there! I'm sunlexbuddy's virtual assistant. Let me know how I can help!
+    <span class="popup-close" id="popup-close">&times;</span>
+  </div>
+  <script>
+    // Use the CONFIG object from the external file to set the href
+    document.getElementById('api-link').href = CONFIG.HEADER_URL;
+  </script>
+
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/scripts.js"></script>
+  <script src="static/js/general.js"></script>  
+   
+</body>
+</html>
